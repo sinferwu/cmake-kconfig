@@ -12,8 +12,7 @@ from kconfiglib import standard_kconfig
 def hardenconfig(kconf):
     kconf.load_config()
 
-    hardened_kconf_filename = os.path.join(os.environ['KCONFIG_BASE'],
-                                           'scripts', 'kconfig', 'hardened.csv')
+    hardened_kconf_filename = os.path.join(os.path.dirname(__file__), 'hardened.csv')
 
     options = compare_with_hardened_conf(kconf, hardened_kconf_filename)
 
