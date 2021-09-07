@@ -10,3 +10,4 @@ include(cmake/extensions.cmake)
 include(cmake/python.cmake)
 include(cmake/kconfig.cmake)
 
+include_directories (${CMAKE_CURRENT_BINARY_DIR}/kconfig/include/generated)
